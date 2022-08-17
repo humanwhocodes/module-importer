@@ -1,6 +1,6 @@
 {
   "name": "@humanwhocodes/module-importer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Universal module importer for Node.js",
   "main": "dist/module-importer.cjs",
   "module": "dist/module-importer.js",
