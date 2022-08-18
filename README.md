@@ -8,6 +8,8 @@ If you find this useful, please consider supporting my work with a [donation](ht
 
 A utility for seamlessly importing modules in Node.js regardless if they are CommonJS or ESM format. Under the hood, this uses `import()` and relies on Node.js's CommonJS compatibility to work correctly. This ensures that the correct locations and formats are used for CommonJS so you can call one method and not worry about any compatibility issues.
 
+The problem with the default `import()` is that it always resolves relative to the file location in which it is called. If you want to resolve from a different location, you need to jump through a few hoops to achieve that. This package makes it easy to both resolve and import modules from any directory.
+
 ## Usage
 
 ### Node.js
