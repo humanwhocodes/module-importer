@@ -3,5 +3,5 @@
  */
 
 const { ModuleImporter } = require("../");
-new ModuleImporter();
+(new ModuleImporter()).import("./src/module-importer.js");
 console.log("CommonJS load: success");
