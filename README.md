@@ -60,7 +60,7 @@ const importer = new ModuleImporter(cwd);
 const location = importer.resolve("./some-file.cjs");
 
 // you can also import directly
-const module = importer.import("./some-file.cjs");
+const module = await importer.import("./some-file.cjs");
 ```
 
 For both `resolve()` and `import()`, you can pass in package names and filenames.
