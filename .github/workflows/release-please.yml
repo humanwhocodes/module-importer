@@ -19,7 +19,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: lts/*
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
@@ -28,12 +28,3 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
-
-      # Tweets out release announcement
-      - run: 'npx @humanwhocodes/tweet "${{ github.event.repository.full_name }} v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }} has been released!\n\n${{ github.event.repository.html_url }}/releases/tag/v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}"'
-        if: ${{ steps.release.outputs.release_created }}
-        env:
-          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
