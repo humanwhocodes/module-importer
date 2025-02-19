@@ -7,8 +7,9 @@
   "type": "module",
   "types": "dist/module-importer.d.ts",
   "exports": {
+    "types": "./dist/module-importer.d.ts",
     "require": "./src/module-importer.cjs",
-    "import": "./src/module-importer.js"
+    "default": "./src/module-importer.js"
   },
   "files": [
     "dist",
