@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/humanwhocodes/module-importer/compare/v1.0.1...v1.0.2) (2025-02-19)
+
+
+### Bug Fixes
+
+* Export types from package.json ([c44459e](https://github.com/humanwhocodes/module-importer/commit/c44459e768f6f5442885f4e5a4261b6b45ae5bcb))
+
 ## [1.0.1](https://github.com/humanwhocodes/module-importer/compare/v1.0.0...v1.0.1) (2022-08-18)
 
 
